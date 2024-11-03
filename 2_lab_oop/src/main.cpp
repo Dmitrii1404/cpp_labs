@@ -15,30 +15,32 @@ int main() {
     std::cout << c.toString() << std::endl;
 
     // присваивание
-    Decimal d = Decimal("222");
+    Decimal d = Decimal("456");
     std::cout << d.toString() << std::endl;
 
     // сложение
-    Decimal e = b + d;
+    Decimal e;
+    e.prisv(b.plus(d));
     std::cout << e.toString() << std::endl;
 
     // вычитание
-    Decimal f = e - b;
+    Decimal f;
+    f.prisv(e.minus(b));
     std::cout << f.toString() << std::endl;
 
     // сравнения
-    Decimal x1("1000");
-    Decimal x2("1001");
+    Decimal x1("342");
+    Decimal x2("343");
 
-    bool n = x1 > x2;
+    bool n = x1.bolshe(x2);
     std::cout << n << std::endl; // false
 
-    n = x1 < x2;
+    n = x1.menshe(x2);
     std::cout << n << std::endl; // true
 
-    n = x1 == x2;
+    n = x1.ravno(x2);
     std::cout << n << std::endl; // false
 
-    n = x1 != x2;
+    n = x1.not_ravno(x2);
     std::cout << n << std::endl; // true
 }

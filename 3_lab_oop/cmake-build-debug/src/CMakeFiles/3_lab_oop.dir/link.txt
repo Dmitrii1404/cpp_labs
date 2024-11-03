@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/3_lab_oop.dir/main.cpp.o -o 3_lab_oop  libfigure_library.a

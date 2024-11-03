@@ -1,14 +1,14 @@
 #ifndef DECIMAL_H
 #define DECIMAL_H
 
-#include <vector>
+#include "dinNums.h"
 #include <string>
 #include <stdexcept>
 #include <iostream>
 
 class Decimal {
   private:
-    std::vector<unsigned char> nums;
+    DinNums nums;
     void delZeros();
     static Decimal add(Decimal const &a, Decimal const &b);
     static Decimal subtract(Decimal const &a, Decimal const &b);
@@ -20,15 +20,15 @@ class Decimal {
     Decimal(Decimal&& other) noexcept;
     ~Decimal();
 
-    Decimal& operator=(Decimal const &other);
-    Decimal& operator=(Decimal&& other) noexcept;
-    Decimal operator+(Decimal const &other) const;
-    Decimal operator-(Decimal const &other) const;
+    Decimal prisv(Decimal const &other);
+    Decimal prisv(Decimal&& other) noexcept;
+    Decimal plus(Decimal const &other) const;
+    Decimal minus(Decimal const &other) const;
 
-    bool operator==(Decimal const &other) const;
-    bool operator!=(Decimal const &other) const;
-    bool operator<(Decimal const &other) const;
-    bool operator>(Decimal const &other) const;
+    bool ravno(Decimal const &other) const;
+    bool not_ravno(Decimal const &other) const;
+    bool menshe(Decimal const &other) const;
+    bool bolshe(Decimal const &other) const;
 
     std::string toString() const;
 };

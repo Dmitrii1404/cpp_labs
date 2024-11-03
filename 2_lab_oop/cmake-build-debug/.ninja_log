@@ -1,0 +1,13 @@
+# ninja log v6
+7	2830	1730555381306255777	Gtest/CMakeFiles/decimal_Test.dir/decimalTest.cpp.o	ce8beb0cf47794d2
+913	1094	1730556059116593878	src/2_lab_oop	48f09625b9b7da63
+5	544	1730556064840511265	Gtest/decimal_Test	20034d89558275f8
+6	912	1730556058208606982	src/CMakeFiles/2_lab_oop.dir/main.cpp.o	3b671fabf34a94e0
+5	249	1730639872579579554	build.ninja	db0af6380515e122
+505	517	1730556047768757630	src/libdecimal_library.a	1ec9fbf2c27ecd0d
+3527	3544	1728561384189052295	lib/libgtest_main.a	b6fb0738ecb005cf
+1	499	1730556047276764728	src/CMakeFiles/decimal_library.dir/decimal.cpp.o	dd00076801979a9f
+11536	12658	1728561353746312961	Gtest/lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	d31c5f8a2fe3c3b9
+976	1275	1730554690871426796	src/CMakeFiles/decimal_library.dir/dinNums.cpp.o	62d8fc2b3374e583
+3	11435	1728561342218800054	Gtest/lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	7085f29609650e09
+11442	11535	1728561353654316827	lib/libgtest.a	3b6fad72e93bf23

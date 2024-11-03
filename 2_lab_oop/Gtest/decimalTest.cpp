@@ -9,9 +9,6 @@ class testDecimal : public ::testing::Test {
       c = new Decimal("300");
     }
     void TearDown() override{
-      delete a;
-      delete b;
-      delete c;
     }
   Decimal *a;
   Decimal *b;
@@ -26,7 +23,8 @@ TEST_F(testDecimal, testConstructor){
 
 TEST_F(testDecimal, testCopy) {
   Decimal x(*a);
-  Decimal y = *b;
+  Decimal y;
+  y.prisv(*b);
   Decimal z(std::move(*c));
   ASSERT_EQ(x.toString(), "100");
   ASSERT_EQ(y.toString(), "200");
@@ -34,24 +32,25 @@ TEST_F(testDecimal, testCopy) {
 }
 
 TEST_F(testDecimal, testMath) {
-  Decimal x1 = *a + *b;
-  Decimal x2 = x1 + *c;
-  Decimal y1 = *c - *b;
-  Decimal y2 = y1 - *a;
+  Decimal x1, x2, y1, y2;
+  x1.prisv((*a).plus(*b));
+  x2.prisv(x1.plus(*c));
+  y1.prisv((*c).minus(*b));
+  y2.prisv(y1.minus(*a));
   ASSERT_EQ(x2.toString(), "600");
   ASSERT_EQ(y2.toString(), "0");
 }
 
 TEST_F(testDecimal, testBool) {
-  ASSERT_FALSE(*a == *b);
-  ASSERT_FALSE(*a == *c);
-  ASSERT_TRUE(*a != *b);
-  ASSERT_TRUE(*a != *c);
+  ASSERT_FALSE((*a).ravno(*b));
+  ASSERT_FALSE((*a).ravno(*c));
+  ASSERT_TRUE((*a).not_ravno(*b));
+  ASSERT_TRUE((*a).not_ravno(*c));
 
-  ASSERT_FALSE(*a > *b);
-  ASSERT_FALSE(*a > *c);
-  ASSERT_TRUE(*a < *b);
-  ASSERT_TRUE(*a < *c);
+  ASSERT_FALSE((*a).bolshe(*b));
+  ASSERT_FALSE((*a).bolshe(*c));
+  ASSERT_TRUE((*a).menshe(*b));
+  ASSERT_TRUE((*a).menshe(*c));
 }
 
 int main(int argc, char **argv){

@@ -8,3 +8,5 @@ target_link_libraries(decimal_Test
         gtest
         gtest_main
 )
+
+set(${CXX_FLAGS} ${CXX_FLAGS} -fsanitize=address)

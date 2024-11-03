@@ -1,5 +1,6 @@
 add_library(decimal_library STATIC
     decimal.cpp
+        dinNums.cpp
 )
 
 target_include_directories(decimal_library PUBLIC ${CMAKE_SOURCE_DIR}/include)
