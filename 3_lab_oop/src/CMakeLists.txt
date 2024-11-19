@@ -3,7 +3,6 @@ add_library(figure_library STATIC
     rhombus.cpp
     trapezoid.cpp
     figure.cpp
-    #figureArr.cpp
         ../include/dinFig.hpp
 )
 

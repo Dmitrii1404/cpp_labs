@@ -27,16 +27,10 @@ int main() {
     F.remove_ind(0);
     std::cout << F.getAllSquare() << std::endl;
 
-    // Потоковый ввод данных
     Figure* y = new Trapezoid();
     std::cin >> *y;
     std::cout << "Figure: " << *y << ", square: " << y->square()
               << ", centre: (" << y->center().first << ", " <<  y->center().second << ")"<< std::endl;
-
-
-
-
-
 
     DinFig<Figure*> G;
     Trapezoid r({1,2},{3,5},{7,5}, {9,2});

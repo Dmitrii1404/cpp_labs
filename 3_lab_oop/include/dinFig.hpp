@@ -25,6 +25,7 @@ void DinFig<T>::resize(size_t new_size) {
   size = new_size;
 }
 
+
 template <typename T>
 DinFig<T> DinFig<T>::operator=(const DinFig &other){
   if (this != &other){
@@ -74,7 +75,6 @@ T& DinFig<T>::operator[](size_t index) const{
 
 template <typename T>
 void DinFig<T>::printCoords(){
-  // for (const auto& figure : figures){
   for (int i = 0; i < len; i++){
     std::cout << *(data[i]) << std::endl;
   }
@@ -82,7 +82,6 @@ void DinFig<T>::printCoords(){
 
 template <typename T>
 void DinFig<T>::printCenters(){
-  // for (const auto& figure : figures){
   for (int i = 0; i < len; i++){
     std::cout << "(" << data[i]->center().first << ", " << data[i]->center().second << ")" << std::endl;
   }
@@ -90,7 +89,6 @@ void DinFig<T>::printCenters(){
 
 template <typename T>
 void DinFig<T>::printSquares(){
-  // for (const auto& figure : figures){
   for (int i = 0; i < len; i++){
     std::cout << data[i]->square() << std::endl;
   }
@@ -99,23 +97,8 @@ void DinFig<T>::printSquares(){
 template <typename T>
 double DinFig<T>::getAllSquare(){
   double sq = 0;
-  // for (const auto& figure : figures){
   for (int i = 0; i < len; i++){
     sq += data[i]->square();
   }
   return sq;
 }
-
-//
-// void DinFig::clear(){
-//   Node* this_ = head;
-//   while(this_ != nullptr){
-//     Node* next = this_->next;
-//     delete this_;
-//     this_ = next;
-//   }
-//   head = tail = nullptr;
-//   size_n = 0;
-// }
-//
-//
